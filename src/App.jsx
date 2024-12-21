@@ -27,7 +27,7 @@ function App() {
   return (
     <main>
       <UserInput onChange = {handleInput} investment={investment} />
-      <Result investment={investment} />
+      {investment.duration <= 0 ? <p className="center">Please enter a valid year</p> : <Result investment={investment} />}
     </main>
   )
 }
